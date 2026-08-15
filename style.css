@@ -13,7 +13,7 @@
     --bg-warm: #fcf9f6;             /* Warm soft cream */
     --bg-card: #ffffff;
     --bg-subtle: #f8f3ee;
-    --bg-chat: #e7f8ee;             /* Soft WA chat tint */
+    --bg-chat: #e7f8ee;
     
     --rose-gold: #b86d60;           /* Refined solid rose gold */
     --rose-gold-dark: #9e564a;
@@ -31,7 +31,9 @@
     --whatsapp-green: #25d366;
     --whatsapp-hover: #20ba5c;
     --shopee-orange: #ee4d2d;
+    --shopee-hover: #d73217;
     --tokped-green: #03ac0e;
+    --tokped-hover: #028e0b;
     
     /* Clean Flat Border Radius */
     --radius-sm: 4px;
@@ -198,6 +200,48 @@ h1, h2, h3, h4 {
     width: 100%;
 }
 
+/* Marketplace Secondary Buttons */
+.marketplace-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.btn-market {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: var(--radius-sm);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    background-color: #ffffff;
+}
+
+.btn-shopee {
+    color: var(--shopee-orange);
+    border-color: rgba(238, 77, 45, 0.3);
+}
+
+.btn-shopee:hover {
+    background-color: var(--shopee-orange);
+    color: #ffffff;
+}
+
+.btn-tokped {
+    color: var(--tokped-green);
+    border-color: rgba(3, 172, 14, 0.3);
+}
+
+.btn-tokped:hover {
+    background-color: var(--tokped-green);
+    color: #ffffff;
+}
+
 /* --- Header / Navigation --- */
 .header {
     position: sticky;
@@ -231,7 +275,7 @@ h1, h2, h3, h4 {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 28px;
 }
 
 .nav-link {
@@ -299,9 +343,9 @@ h1, h2, h3, h4 {
 }
 
 .hero-title {
-    font-size: clamp(2.3rem, 4vw, 3.1rem);
+    font-size: clamp(2.2rem, 3.8vw, 3rem);
     font-weight: 600;
-    line-height: 1.22;
+    line-height: 1.24;
     color: var(--text-dark);
     margin-bottom: 18px;
     letter-spacing: -0.02em;
@@ -356,6 +400,7 @@ h1, h2, h3, h4 {
     background-color: #ffffff;
     border: 1px solid var(--border-color);
     color: var(--text-dark);
+    transition: var(--transition);
 }
 
 .channel-badge.channel-wa {
@@ -370,10 +415,20 @@ h1, h2, h3, h4 {
     background-color: #fdf6f4;
 }
 
+.channel-badge.channel-shopee:hover {
+    background-color: var(--shopee-orange);
+    color: #ffffff;
+}
+
 .channel-badge.channel-tokped {
     color: var(--tokped-green);
     border-color: rgba(3, 172, 14, 0.25);
     background-color: #f2faf3;
+}
+
+.channel-badge.channel-tokped:hover {
+    background-color: var(--tokped-green);
+    color: #ffffff;
 }
 
 .hero-image-wrapper {
@@ -457,18 +512,18 @@ h1, h2, h3, h4 {
     font-size: 0.88rem;
     color: var(--text-muted);
     line-height: 1.6;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 .product-specs-list {
     background-color: var(--bg-warm);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
-    padding: 12px 14px;
-    margin-bottom: 18px;
+    padding: 10px 12px;
+    margin-bottom: 14px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 5px;
 }
 
 .spec-row {
@@ -488,13 +543,54 @@ h1, h2, h3, h4 {
     text-align: right;
 }
 
+/* Color Swatches Indicator */
+.color-swatches-box {
+    margin-bottom: 16px;
+    padding-top: 4px;
+}
+
+.swatches-label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.swatches-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.color-swatch-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--bg-warm);
+    border: 1px solid var(--border-subtle);
+    padding: 3px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 0.74rem;
+    color: var(--text-body);
+}
+
+.swatch-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+}
+
 .product-footer {
-    padding-top: 16px;
+    padding-top: 14px;
     border-top: 1px solid var(--border-subtle);
     margin-top: auto;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 
 .price-box {
@@ -516,7 +612,7 @@ h1, h2, h3, h4 {
     text-decoration: line-through;
 }
 
-/* --- Section 'Kenapa Hijab Alana' (Klaim Nyata) --- */
+/* --- Section 'Kenapa Hijab Alana' --- */
 .features {
     background-color: var(--bg-warm);
     border-bottom: 1px solid var(--border-color);
@@ -665,10 +761,90 @@ h1, h2, h3, h4 {
     border-top: 1px dashed var(--border-subtle);
 }
 
+/* --- Section FAQ (Accordion Interaktif) --- */
+.faq-section {
+    background-color: var(--bg-warm);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.faq-accordion-container {
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    border-color: var(--rose-gold);
+}
+
+.faq-item.active {
+    border-color: var(--rose-gold);
+    box-shadow: var(--shadow-card);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: left;
+    background-color: #ffffff;
+    transition: var(--transition);
+}
+
+.faq-icon {
+    flex-shrink: 0;
+    color: var(--rose-gold);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 240px;
+}
+
+.faq-answer-inner {
+    padding: 0 24px 22px 24px;
+    font-size: 0.92rem;
+    color: var(--text-body);
+    line-height: 1.7;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 14px;
+}
+
+.faq-answer-inner strong {
+    color: var(--text-dark);
+}
+
 /* --- Banner Pemesanan --- */
 .cta-section {
     padding: 72px 0;
-    background-color: var(--bg-warm);
+    background-color: #ffffff;
 }
 
 .cta-banner {
@@ -790,29 +966,9 @@ h1, h2, h3, h4 {
     color: var(--text-light);
 }
 
-/* --- Floating WhatsApp Button --- */
-.floating-wa-btn {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    background-color: var(--whatsapp-green);
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 18px;
-    border-radius: var(--radius-md);
-    z-index: 999;
-    font-weight: 600;
-    font-size: 0.9rem;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
-    transition: var(--transition);
-}
-
-.floating-wa-btn:hover {
-    background-color: var(--whatsapp-hover);
-    transform: translateY(-2px);
-    color: #ffffff;
+/* --- Sticky Floating WA Button (Khusus Layar Mobile) --- */
+.mobile-sticky-wa-container {
+    display: none; /* Hidden on Desktop by default */
 }
 
 /* --- Responsive Breakpoints --- */
@@ -864,11 +1020,11 @@ h1, h2, h3, h4 {
 
 @media (max-width: 768px) {
     .section {
-        padding: 64px 0;
+        padding: 60px 0;
     }
 
     .hero {
-        padding: 48px 0 64px 0;
+        padding: 44px 0 60px 0;
     }
 
     .nav-toggle {
@@ -894,8 +1050,8 @@ h1, h2, h3, h4 {
         display: flex;
     }
 
-    .nav-actions .btn-sm {
-        display: none;
+    .header-wa-btn {
+        display: none; /* Disembunyikan di header mobile karena diganti sticky floating bar bawah */
     }
 
     .products-grid, .chat-testimonials-grid {
@@ -917,16 +1073,38 @@ h1, h2, h3, h4 {
         flex-direction: column;
         gap: 8px;
         text-align: center;
+        padding-bottom: 70px; /* Space for mobile sticky button */
     }
 
-    .floating-wa-btn span {
-        display: none;
+    /* Tampilkan Sticky Floating WA Bar Hanya di Mobile */
+    .mobile-sticky-wa-container {
+        display: block;
+        position: fixed;
+        bottom: 16px;
+        left: 16px;
+        right: 16px;
+        z-index: 9999;
     }
 
-    .floating-wa-btn {
-        padding: 12px;
-        bottom: 18px;
-        right: 18px;
+    .mobile-sticky-wa-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: var(--whatsapp-green);
+        color: #ffffff;
+        padding: 14px 20px;
+        border-radius: var(--radius-full);
+        font-weight: 600;
+        font-size: 0.95rem;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobile-sticky-wa-btn:hover {
+        background-color: var(--whatsapp-hover);
+        color: #ffffff;
     }
 }
 
@@ -954,5 +1132,14 @@ h1, h2, h3, h4 {
 
     .guarantee-card {
         padding: 24px 20px;
+    }
+
+    .faq-question {
+        padding: 16px 18px;
+        font-size: 0.95rem;
+    }
+
+    .faq-answer-inner {
+        padding: 0 18px 18px 18px;
     }
 }
