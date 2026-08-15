@@ -1,25 +1,26 @@
 /* ==========================================================
-   Toko Hijab 'Alana' - Anti-AI Slop Minimalist Stylesheet
-   Design Philosophy: Flat UI, Concrete Info, Human Copy, Clean
-   Typography: Playfair Display & Poppins
+   Toko Hijab 'Alana' - Clean Modern E-Commerce Stylesheet
+   Focus: Anti-AI Slop, Flat UI, Real Trust Signals, Fast & Responsive
+   Typography: Google Fonts Playfair Display & Poppins
    ========================================================== */
 
 /* --- Google Fonts Import --- */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
-/* --- Design Tokens & Color System --- */
+/* --- Design Tokens & Color Palette --- */
 :root {
     --bg-page: #ffffff;
     --bg-warm: #fcf9f6;             /* Warm soft cream */
     --bg-card: #ffffff;
-    --bg-subtle: #f7f2ed;
+    --bg-subtle: #f8f3ee;
+    --bg-chat: #e7f8ee;             /* Soft WA chat tint */
     
     --rose-gold: #b86d60;           /* Refined solid rose gold */
     --rose-gold-dark: #9e564a;
     --rose-gold-light: #faeee9;
     
-    --text-dark: #1f242e;           /* Dark Slate */
-    --text-body: #475569;           /* Readable slate neutral */
+    --text-dark: #1f242e;           /* Dark Slate / Charcoal */
+    --text-body: #475569;           /* Readable body neutral */
     --text-muted: #64748b;
     --text-light: #94a3b8;
     
@@ -29,13 +30,15 @@
     
     --whatsapp-green: #25d366;
     --whatsapp-hover: #20ba5c;
+    --shopee-orange: #ee4d2d;
+    --tokped-green: #03ac0e;
     
-    /* Clean Flat Corners */
+    /* Clean Flat Border Radius */
     --radius-sm: 4px;
     --radius-md: 6px;
     --radius-lg: 8px;
     
-    /* Subtle Flat Shadow */
+    /* Utility Shadows */
     --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.04);
     --shadow-card: 0 4px 14px rgba(0, 0, 0, 0.04);
     --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.07);
@@ -316,29 +319,61 @@ h1, h2, h3, h4 {
     flex-wrap: wrap;
     align-items: center;
     gap: 16px;
-    margin-bottom: 38px;
+    margin-bottom: 34px;
 }
 
-.hero-stats {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    padding-top: 24px;
+/* --- Channels Box (Real Order Channels) --- */
+.channels-box {
+    padding-top: 22px;
     border-top: 1px solid var(--border-color);
 }
 
-.stat-item h4 {
-    font-family: var(--font-heading);
-    font-size: 1.45rem;
-    font-weight: 700;
-    color: var(--text-dark);
-    line-height: 1.2;
+.channels-title {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    margin-bottom: 12px;
 }
 
-.stat-item p {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin-top: 2px;
+.channels-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.channel-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: var(--radius-sm);
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    color: var(--text-dark);
+}
+
+.channel-badge.channel-wa {
+    color: var(--whatsapp-hover);
+    border-color: rgba(37, 211, 102, 0.35);
+    background-color: #f0faf3;
+}
+
+.channel-badge.channel-shopee {
+    color: var(--shopee-orange);
+    border-color: rgba(238, 77, 45, 0.25);
+    background-color: #fdf6f4;
+}
+
+.channel-badge.channel-tokped {
+    color: var(--tokped-green);
+    border-color: rgba(3, 172, 14, 0.25);
+    background-color: #f2faf3;
 }
 
 .hero-image-wrapper {
@@ -536,47 +571,98 @@ h1, h2, h3, h4 {
     padding-left: 38px;
 }
 
-/* --- Testimonials --- */
+/* --- Testimoni Gaya Chat WhatsApp --- */
 .testimonials {
     background-color: #ffffff;
     border-bottom: 1px solid var(--border-color);
 }
 
-.testimonials-grid {
+.chat-testimonials-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    gap: 24px;
 }
 
-.testimonial-card {
+.chat-card {
     background-color: var(--bg-warm);
-    border: 1px solid var(--border-subtle);
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
-    padding: 28px 24px;
+    padding: 24px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.testimonial-quote {
-    font-size: 0.92rem;
-    color: var(--text-body);
-    font-style: italic;
-    line-height: 1.65;
-    margin-bottom: 18px;
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 16px;
 }
 
-.testimonial-user h5 {
+.chat-name {
     font-family: var(--font-body);
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-dark);
+    line-height: 1.2;
 }
 
-.testimonial-user p {
-    font-size: 0.8rem;
-    color: var(--text-muted);
+.verified-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--whatsapp-hover);
     margin-top: 2px;
+}
+
+.chat-item-tag {
+    font-size: 0.72rem;
+    background-color: #ffffff;
+    color: var(--text-muted);
+    border: 1px solid var(--border-subtle);
+    padding: 3px 8px;
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+}
+
+.chat-bubble {
+    background-color: #ffffff;
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px 12px 12px 2px;
+    padding: 16px 14px;
+    margin-bottom: 14px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.chat-text {
+    font-size: 0.88rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.chat-meta {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.72rem;
+    color: var(--text-light);
+}
+
+.chat-check {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+.chat-footer-note {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    padding-top: 8px;
+    border-top: 1px dashed var(--border-subtle);
 }
 
 /* --- Banner Pemesanan --- */
@@ -625,7 +711,7 @@ h1, h2, h3, h4 {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
     gap: 40px;
     margin-bottom: 48px;
 }
@@ -745,7 +831,11 @@ h1, h2, h3, h4 {
         justify-content: center;
     }
 
-    .hero-stats {
+    .channels-box {
+        text-align: center;
+    }
+
+    .channels-list {
         justify-content: center;
     }
 
@@ -758,7 +848,7 @@ h1, h2, h3, h4 {
         height: 400px;
     }
 
-    .products-grid, .testimonials-grid {
+    .products-grid, .chat-testimonials-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -808,7 +898,7 @@ h1, h2, h3, h4 {
         display: none;
     }
 
-    .products-grid, .testimonials-grid {
+    .products-grid, .chat-testimonials-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
