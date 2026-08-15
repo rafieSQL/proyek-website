@@ -1,50 +1,50 @@
 /* ==========================================================
-   Toko Hijab 'Alana' - Clean Modern E-Commerce Stylesheet
-   Design Style: Minimalist, Flat UI, Crisp Typography
+   Toko Hijab 'Alana' - Anti-AI Slop Minimalist Stylesheet
+   Design Philosophy: Flat UI, Concrete Info, Human Copy, Clean
    Typography: Playfair Display & Poppins
    ========================================================== */
 
 /* --- Google Fonts Import --- */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
-/* --- CSS Variables & Design Tokens --- */
+/* --- Design Tokens & Color System --- */
 :root {
-    /* Solid Palette: Dusty Pink, Cream, & Dark Slate */
     --bg-page: #ffffff;
-    --bg-warm: #fbf8f5;             /* Warm soft cream */
+    --bg-warm: #fcf9f6;             /* Warm soft cream */
     --bg-card: #ffffff;
-    --bg-card-alt: #f8f4f0;
+    --bg-subtle: #f7f2ed;
     
-    --rose-gold: #b86d60;           /* Solid refined rose gold */
-    --rose-gold-dark: #9c5549;
-    --rose-gold-light: #f5ebe7;
+    --rose-gold: #b86d60;           /* Refined solid rose gold */
+    --rose-gold-dark: #9e564a;
+    --rose-gold-light: #faeee9;
     
-    --text-dark: #1a1a1a;           /* Dark Slate / Charcoal */
-    --text-body: #4a4a4a;           /* Readable neutral body */
-    --text-muted: #737373;          /* Secondary text */
-    --text-light: #a3a3a3;
+    --text-dark: #1f242e;           /* Dark Slate */
+    --text-body: #475569;           /* Readable slate neutral */
+    --text-muted: #64748b;
+    --text-light: #94a3b8;
     
-    --border-color: #e8e2de;
-    --border-subtle: #f0eae5;
-    --border-dark: #1a1a1a;
+    --border-color: #e5ded8;
+    --border-subtle: #f0eae4;
+    --border-dark: #1f242e;
     
     --whatsapp-green: #25d366;
     --whatsapp-hover: #20ba5c;
     
-    /* Clean Flat Border Radius */
+    /* Clean Flat Corners */
     --radius-sm: 4px;
     --radius-md: 6px;
     --radius-lg: 8px;
     
-    /* Subtle Utility Shadows (No Glow / No Neon) */
-    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.05);
-    --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.06);
+    /* Subtle Flat Shadow */
+    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.04);
+    --shadow-card: 0 4px 14px rgba(0, 0, 0, 0.04);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.07);
     
     /* Typography */
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     
-    --transition: all 0.25s ease;
+    --transition: all 0.22s ease-in-out;
 }
 
 /* --- Base & Reset --- */
@@ -105,22 +105,22 @@ button {
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
     color: var(--text-dark);
-    line-height: 1.25;
+    line-height: 1.28;
     font-weight: 600;
 }
 
 .section {
-    padding: 88px 0;
+    padding: 84px 0;
 }
 
 .section-header {
     text-align: center;
-    max-width: 640px;
+    max-width: 660px;
     margin: 0 auto 52px auto;
 }
 
 .section-title {
-    font-size: clamp(1.9rem, 3.2vw, 2.4rem);
+    font-size: clamp(1.9rem, 3.2vw, 2.35rem);
     margin-bottom: 12px;
     color: var(--text-dark);
     letter-spacing: -0.01em;
@@ -140,8 +140,8 @@ h1, h2, h3, h4 {
     gap: 8px;
     font-family: var(--font-body);
     font-weight: 500;
-    font-size: 0.95rem;
-    padding: 13px 26px;
+    font-size: 0.94rem;
+    padding: 12px 24px;
     border-radius: var(--radius-md);
     transition: var(--transition);
     text-align: center;
@@ -176,11 +176,19 @@ h1, h2, h3, h4 {
 
 .btn-whatsapp:hover {
     background-color: var(--whatsapp-hover);
+    color: #ffffff;
 }
 
 .btn-sm {
     padding: 9px 18px;
     font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.btn-large {
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .btn-block {
@@ -214,7 +222,7 @@ h1, h2, h3, h4 {
     font-size: 1.65rem;
     font-weight: 700;
     color: var(--text-dark);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.015em;
 }
 
 .nav-menu {
@@ -272,13 +280,13 @@ h1, h2, h3, h4 {
 /* --- Hero Section --- */
 .hero {
     background-color: var(--bg-warm);
-    padding: 72px 0 88px 0;
+    padding: 72px 0 84px 0;
     border-bottom: 1px solid var(--border-color);
 }
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1.15fr 0.85fr;
     gap: 56px;
     align-items: center;
 }
@@ -288,18 +296,18 @@ h1, h2, h3, h4 {
 }
 
 .hero-title {
-    font-size: clamp(2.3rem, 4.2vw, 3.2rem);
+    font-size: clamp(2.3rem, 4vw, 3.1rem);
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.22;
     color: var(--text-dark);
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     letter-spacing: -0.02em;
 }
 
 .hero-description {
     font-size: 1.05rem;
     color: var(--text-body);
-    margin-bottom: 34px;
+    margin-bottom: 32px;
     line-height: 1.75;
 }
 
@@ -308,7 +316,7 @@ h1, h2, h3, h4 {
     flex-wrap: wrap;
     align-items: center;
     gap: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
 }
 
 .hero-stats {
@@ -321,8 +329,8 @@ h1, h2, h3, h4 {
 
 .stat-item h4 {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.45rem;
+    font-weight: 700;
     color: var(--text-dark);
     line-height: 1.2;
 }
@@ -350,54 +358,9 @@ h1, h2, h3, h4 {
     object-fit: cover;
 }
 
-/* --- Features / Keunggulan --- */
-.features {
-    background-color: #ffffff;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-}
-
-.feature-card {
-    background-color: var(--bg-warm);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
-    padding: 36px 28px;
-    text-align: left;
-    transition: var(--transition);
-}
-
-.feature-card:hover {
-    border-color: var(--border-color);
-    background-color: #ffffff;
-    box-shadow: var(--shadow-hover);
-}
-
-.feature-icon {
-    color: var(--rose-gold);
-    margin-bottom: 20px;
-}
-
-.feature-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: 10px;
-}
-
-.feature-text {
-    font-size: 0.92rem;
-    color: var(--text-muted);
-    line-height: 1.7;
-}
-
-/* --- Catalog / Produk Unggulan --- */
+/* --- Catalog & Spesifikasi Produk --- */
 .catalog {
-    background-color: var(--bg-warm);
+    background-color: #ffffff;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -408,7 +371,7 @@ h1, h2, h3, h4 {
 }
 
 .product-card {
-    background-color: var(--bg-card);
+    background-color: #ffffff;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
     overflow: hidden;
@@ -418,17 +381,18 @@ h1, h2, h3, h4 {
 }
 
 .product-card:hover {
-    transform: translateY(-4px);
     border-color: var(--rose-gold);
     box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
 }
 
 .product-image-container {
     position: relative;
     width: 100%;
-    padding-top: 100%; /* 1:1 Square Aspect Ratio */
+    padding-top: 100%; /* 1:1 Aspect Ratio */
     background-color: var(--bg-warm);
     overflow: hidden;
+    border-bottom: 1px solid var(--border-subtle);
 }
 
 .product-image-container img {
@@ -458,22 +422,44 @@ h1, h2, h3, h4 {
     font-size: 0.88rem;
     color: var(--text-muted);
     line-height: 1.6;
-    margin-bottom: 12px;
-    flex-grow: 1;
+    margin-bottom: 16px;
 }
 
-.product-spec {
-    font-size: 0.8rem;
-    color: var(--text-light);
+.product-specs-list {
+    background-color: var(--bg-warm);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
     margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+}
+
+.spec-label {
+    color: var(--text-muted);
+}
+
+.spec-value {
+    color: var(--text-dark);
+    font-weight: 500;
+    text-align: right;
 }
 
 .product-footer {
     padding-top: 16px;
     border-top: 1px solid var(--border-subtle);
+    margin-top: auto;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
 }
 
 .price-box {
@@ -493,6 +479,61 @@ h1, h2, h3, h4 {
     font-size: 0.88rem;
     color: var(--text-light);
     text-decoration: line-through;
+}
+
+/* --- Section 'Kenapa Hijab Alana' (Klaim Nyata) --- */
+.features {
+    background-color: var(--bg-warm);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.guarantee-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.guarantee-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    transition: var(--transition);
+}
+
+.guarantee-card:hover {
+    border-color: var(--rose-gold);
+    box-shadow: var(--shadow-card);
+}
+
+.guarantee-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.guarantee-num {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--rose-gold);
+    line-height: 1.2;
+    flex-shrink: 0;
+}
+
+.guarantee-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.35;
+}
+
+.guarantee-text {
+    font-size: 0.92rem;
+    color: var(--text-body);
+    line-height: 1.7;
+    padding-left: 38px;
 }
 
 /* --- Testimonials --- */
@@ -522,7 +563,7 @@ h1, h2, h3, h4 {
     color: var(--text-body);
     font-style: italic;
     line-height: 1.65;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .testimonial-user h5 {
@@ -535,9 +576,10 @@ h1, h2, h3, h4 {
 .testimonial-user p {
     font-size: 0.8rem;
     color: var(--text-muted);
+    margin-top: 2px;
 }
 
-/* --- Banner CTA --- */
+/* --- Banner Pemesanan --- */
 .cta-section {
     padding: 72px 0;
     background-color: var(--bg-warm);
@@ -552,7 +594,7 @@ h1, h2, h3, h4 {
 }
 
 .cta-content {
-    max-width: 600px;
+    max-width: 620px;
     margin: 0 auto;
 }
 
@@ -564,9 +606,13 @@ h1, h2, h3, h4 {
 
 .cta-text {
     font-size: 1rem;
-    color: #d4d4d4;
+    color: #cbd5e1;
     margin-bottom: 28px;
     line-height: 1.7;
+}
+
+.cta-text strong {
+    color: #ffffff;
 }
 
 /* --- Footer --- */
@@ -602,8 +648,9 @@ h1, h2, h3, h4 {
 
 .social-links {
     display: flex;
-    gap: 16px;
-    margin-top: 18px;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
 }
 
 .social-link {
@@ -644,6 +691,7 @@ h1, h2, h3, h4 {
     font-size: 0.88rem;
     color: var(--text-muted);
     margin-bottom: 8px;
+    line-height: 1.6;
 }
 
 .footer-bottom {
@@ -656,7 +704,7 @@ h1, h2, h3, h4 {
     color: var(--text-light);
 }
 
-/* --- Floating WhatsApp Button (Clean Flat UI) --- */
+/* --- Floating WhatsApp Button --- */
 .floating-wa-btn {
     position: fixed;
     bottom: 24px;
@@ -669,9 +717,9 @@ h1, h2, h3, h4 {
     padding: 12px 18px;
     border-radius: var(--radius-md);
     z-index: 999;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.9rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
     transition: var(--transition);
 }
 
@@ -681,7 +729,7 @@ h1, h2, h3, h4 {
     color: #ffffff;
 }
 
-/* --- Responsive Media Queries --- */
+/* --- Responsive Breakpoints --- */
 @media (max-width: 992px) {
     .hero-grid {
         grid-template-columns: 1fr;
@@ -710,8 +758,12 @@ h1, h2, h3, h4 {
         height: 400px;
     }
 
-    .features-grid, .products-grid, .testimonials-grid {
+    .products-grid, .testimonials-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .guarantee-grid {
+        grid-template-columns: 1fr;
     }
 
     .footer-grid {
@@ -756,9 +808,14 @@ h1, h2, h3, h4 {
         display: none;
     }
 
-    .features-grid, .products-grid, .testimonials-grid {
+    .products-grid, .testimonials-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .guarantee-text {
+        padding-left: 0;
+        margin-top: 6px;
     }
 
     .footer-grid {
@@ -803,5 +860,9 @@ h1, h2, h3, h4 {
 
     .hero-image-card img {
         height: 320px;
+    }
+
+    .guarantee-card {
+        padding: 24px 20px;
     }
 }
