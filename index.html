@@ -3,161 +3,512 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Saya</title>
+    <title>Hijab Alana - Tampil Elegan & Nyaman Setiap Hari</title>
+    <meta name="description" content="Toko Hijab Alana - Koleksi hijab premium, bahan sejuk, lembut, dan tegak sempurna untuk muslimah modern. Belanja mudah via WhatsApp.">
+    
+    <!-- Google Fonts: Playfair Display & Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent-color: #38bdf8;
-            --accent-glow: rgba(56, 189, 248, 0.15);
-            --border-color: #334155;
-            --badge-bg: rgba(56, 189, 248, 0.1);
-            --badge-text: #38bdf8;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-            line-height: 1.6;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 560px;
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 40px 32px;
-            text-align: center;
-            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), 0 0 60px -20px var(--accent-glow);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #38bdf8, #818cf8, #38bdf8);
-        }
-
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 14px;
-            border-radius: 9999px;
-            background: var(--badge-bg);
-            color: var(--badge-text);
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 24px;
-            border: 1px solid rgba(56, 189, 248, 0.2);
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #22c55e;
-            border-radius: 50%;
-            box-shadow: 0 0 8px #22c55e;
-        }
-
-        h1 {
-            font-size: 1.875rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 16px;
-            letter-spacing: -0.02em;
-        }
-
-        p {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            margin-bottom: 32px;
-        }
-
-        .info-card {
-            background-color: rgba(15, 23, 42, 0.6);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            gap: 16px;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .info-item svg {
-            width: 18px;
-            height: 18px;
-            fill: currentColor;
-            color: var(--accent-color);
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 32px 20px;
-            }
-
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            .info-card {
-                flex-direction: column;
-                gap: 12px;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="container">
-        <div class="status-badge">
-            <span class="status-dot"></span>
-            Online & Aktif
-        </div>
-        <h1>Halo! Website saya berhasil dibuat.</h1>
-        <p>Ini dibuat pakai AntiGravity dan dipublikasi lewat GitHub Pages.</p>
 
-        <div class="info-card">
-            <div class="info-item">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
-                <span>AntiGravity AI</span>
-            </div>
-            <div class="info-item">
-                <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                <span>GitHub Pages</span>
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#beranda" class="logo" aria-label="Hijab Alana Home">
+                <div class="logo-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                    </svg>
+                </div>
+                <span class="logo-text">Hijab <span>Alana</span></span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#beranda" class="nav-link active">Beranda</a>
+                <a href="#keunggulan" class="nav-link">Keunggulan</a>
+                <a href="#katalog" class="nav-link">Katalog Produk</a>
+                <a href="#testimoni" class="nav-link">Testimoni</a>
+                <a href="#kontak" class="nav-link">Kontak</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://wa.me/6281234567890?text=Halo%20Hijab%20Alana,%20saya%20tertarik%20dengan%20koleksi%20hijabnya" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Hubungi Kami</span>
+                </a>
+
+                <button class="nav-toggle" id="nav-toggle" aria-label="Buka menu navigasi">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
-    </main>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="beranda">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="section-tag">
+                        ✨ Koleksi Eksklusif Muslimah Modern
+                    </div>
+                    <h1 class="hero-title">
+                        Tampil Elegan & <span class="highlight">Nyaman</span> Setiap Hari
+                    </h1>
+                    <p class="hero-description">
+                        Lengkapi pesona harianmu dengan koleksi hijab premium dari Alana. Dibuat dengan bahan yang sejuk, halus, dan tegak sempurna, dirancang khusus untuk kenyamanan wanita aktif sepanjang hari.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/6281234567890?text=Halo%20Alana,%20saya%20ingin%20memesan%20hijab" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                            </svg>
+                            <span>Pesan via WhatsApp</span>
+                        </a>
+                        <a href="#katalog" class="btn btn-secondary">
+                            <span>Lihat Katalog</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h4>100%</h4>
+                            <p>Bahan Premium</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>2.500+</h4>
+                            <p>Pelanggan Puas</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>4.9 ★</h4>
+                            <p>Rating Ulasan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-card">
+                        <img src="assets/hero.jpg" alt="Model Muslimah mengenakan hijab Alana warna dusty pink" loading="eager">
+                    </div>
+                    
+                    <div class="floating-badge badge-top">
+                        <div class="badge-icon-box">🌸</div>
+                        <div class="badge-info">
+                            <h5>Serat Alami & Adem</h5>
+                            <p>Nyaman dipakai seharian</p>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge badge-bottom">
+                        <div class="badge-icon-box">⭐</div>
+                        <div class="badge-info">
+                            <div class="rating-stars">★★★★★ 4.9/5.0</div>
+                            <p>Terbukti Disukai Muslimah</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keunggulan Section -->
+    <section class="section features" id="keunggulan">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Keunggulan Alana</div>
+                <h2 class="section-title">Kualitas Istimewa dalam Setiap Helai Kain</h2>
+                <p class="section-subtitle">
+                    Kami memilih material terbaik dan kontrol jahitan presisi agar setiap hijab yang kamu kenakan menghadirkan rasa percaya diri maksimal.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Keunggulan 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Bahan Premium & Adem</h3>
+                    <p class="feature-text">
+                        Terbuat dari serat kain pilihan dengan sirkulasi udara optimal (breathable). Tetap terasa dingin dan ringan di kepala meski beraktivitas seharian di cuaca tropis.
+                    </p>
+                </div>
+
+                <!-- Keunggulan 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="M9 12l2 2 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Jahitan Rapi Standar Butik</h3>
+                    <p class="feature-text">
+                        Dikerjakan dengan teknik jahit tepi halus (baby seam) yang rapat dan rapi. Awet, tidak mudah terurai, dan tidak berbulu walau dicuci berulang kali.
+                    </p>
+                </div>
+
+                <!-- Keunggulan 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M16 12l-4-4-4 4"></path>
+                            <path d="M12 16V8"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Mudah Dibentuk & Anti-Mleyot</h3>
+                    <p class="feature-text">
+                        Karakteristik kain jatuh pas dan mudah tegak paripurna di dahi tanpa perlu semprotan kaku. Siap menemani penampilan rapi seketika tanpa ribet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Katalog Singkat Section -->
+    <section class="section catalog" id="katalog">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Katalog Unggulan</div>
+                <h2 class="section-title">Koleksi Favorit Sahabat Alana</h2>
+                <p class="section-subtitle">
+                    Tiga seri hijab terlaris dengan pilihan warna anggun dan bahan berkelas, siap mempercantik harimu.
+                </p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Produk 1: Pashmina Silk -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <span class="product-badge">Best Seller</span>
+                        <img src="assets/pashmina-silk.jpg" alt="Pashmina Silk Premium warna rose gold" loading="lazy">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-rating">
+                            <span class="rating-stars">★★★★★</span>
+                            <span>(4.9 • 850+ Terjual)</span>
+                        </div>
+                        <h3 class="product-title">Pashmina Silk Premium</h3>
+                        <p class="product-desc">
+                            Kilau mewah yang lembut dan flowy sempurna. Sangat cocok untuk pesta, kondangan, maupun gaya glamor harian yang berkelas.
+                        </p>
+                        <div class="product-tags">
+                            <span class="tag-pill">180 x 75 cm</span>
+                            <span class="tag-pill">Silk Satin Luxury</span>
+                            <span class="tag-pill">Flowy & Anggun</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-box">
+                                <span class="current-price">Rp 65.000</span>
+                                <span class="original-price">Rp 85.000</span>
+                            </div>
+                            <a href="https://wa.me/6281234567890?text=Halo%20Hijab%20Alana,%20saya%20mau%20pesan%20Pashmina%20Silk%20Premium%20(Rp%2065.000)" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm btn-block">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                                </svg>
+                                <span>Beli via WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 2: Bella Square -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <span class="product-badge">Favorit Harian</span>
+                        <img src="assets/bella-square.jpg" alt="Bella Square Classic Pollycotton warna pastel" loading="lazy">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-rating">
+                            <span class="rating-stars">★★★★★</span>
+                            <span>(4.9 • 1.400+ Terjual)</span>
+                        </div>
+                        <h3 class="product-title">Bella Square Classic</h3>
+                        <p class="product-desc">
+                            Hijab segi empat legendaris bahan double hycon pollycotton. Ringan, tegak di dahi, tidak terawang, dan super adem.
+                        </p>
+                        <div class="product-tags">
+                            <span class="tag-pill">115 x 115 cm</span>
+                            <span class="tag-pill">Pollycotton Grade A</span>
+                            <span class="tag-pill">Tegak Sempurna</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-box">
+                                <span class="current-price">Rp 35.000</span>
+                                <span class="original-price">Rp 45.000</span>
+                            </div>
+                            <a href="https://wa.me/6281234567890?text=Halo%20Hijab%20Alana,%20saya%20mau%20pesan%20Bella%20Square%20Classic%20(Rp%2035.000)" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm btn-block">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                                </svg>
+                                <span>Beli via WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 3: Instant Bergo -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <span class="product-badge">Praktis & Simpel</span>
+                        <img src="assets/instant-bergo.jpg" alt="Instant Bergo Daily Jersey warna dusty mauve" loading="lazy">
+                    </div>
+                    <div class="product-body">
+                        <div class="product-rating">
+                            <span class="rating-stars">★★★★★</span>
+                            <span>(4.8 • 620+ Terjual)</span>
+                        </div>
+                        <h3 class="product-title">Instant Bergo Daily</h3>
+                        <p class="product-desc">
+                            Bergo instan langsung pakai tanpa jarum pentul. Bahan jersey tebal lentur, menutup dada dengan sopan, cocok untuk sehari-hari.
+                        </p>
+                        <div class="product-tags">
+                            <span class="tag-pill">Menutup Dada</span>
+                            <span class="tag-pill">Jersey Import</span>
+                            <span class="tag-pill">Anti Ribet</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="price-box">
+                                <span class="current-price">Rp 45.000</span>
+                                <span class="original-price">Rp 55.000</span>
+                            </div>
+                            <a href="https://wa.me/6281234567890?text=Halo%20Hijab%20Alana,%20saya%20mau%20pesan%20Instant%20Bergo%20Daily%20(Rp%2045.000)" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm btn-block">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                                </svg>
+                                <span>Beli via WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni Pelanggan -->
+    <section class="section testimonials" id="testimoni">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Ulasan Pelanggan</div>
+                <h2 class="section-title">Apa Kata Mereka Tentang Alana?</h2>
+                <p class="section-subtitle">
+                    Kepuasan dan kenyamanan muslimah adalah prioritas utama setiap karya kami.
+                </p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-quote">
+                        "Pashmina silk-nya beneran mewah banget! Nggak licin dan gampang dibentuk di kepala. Dipakai ke pesta pernikahan langsung banyak yang nanyain beli di mana."
+                    </p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar">SR</div>
+                        <div class="user-meta">
+                            <h5>Siti Rahmawati</h5>
+                            <p>Jakarta Selatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-quote">
+                        "Bella Square-nya juara! Bahannya adem, tegak di dahi tanpa perlu semprotan kaku, warnanya soft rose gold-nya persis di foto. Pasti bakal repurchase warna lain."
+                    </p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar">NA</div>
+                        <div class="user-meta">
+                            <h5>Nadia Anindya</h5>
+                            <p>Bandung</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-quote">
+                        "Bergo instannya penolong banget buat ibu muda yang serba cepat. Jahitannya rapi pol, bahannya lembut dingin, dan admin WA-nya ramah banget melayani."
+                    </p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar">FH</div>
+                        <div class="user-meta">
+                            <h5>Fitri Handayani</h5>
+                            <p>Surabaya</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Banner Call to Action -->
+    <section class="container" style="margin-bottom: 80px;">
+        <div class="cta-banner">
+            <div class="cta-content">
+                <h2 class="cta-title">Siap Tampil Lebih Anggun Hari Ini?</h2>
+                <p class="cta-text">
+                    Dapatkan penawaran harga spesial bundling dan diskon ongkir ke seluruh Indonesia. Hubungi kami langsung melalui WhatsApp untuk konsultasi warna & ketersediaan stok!
+                </p>
+                <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Alana,%20saya%20mau%20tanya%20promo%20dan%20koleksi%20terbaru" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Konsultasi & Pesan Sekarang</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="kontak">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Info -->
+                <div class="footer-brand">
+                    <a href="#beranda" class="logo">
+                        <div class="logo-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                            </svg>
+                        </div>
+                        <span class="logo-text">Hijab <span>Alana</span></span>
+                    </a>
+                    <p class="footer-desc">
+                        Brand hijab UMKM Indonesia yang mendedikasikan kualitas dan kenyamanan untuk melengkapi keanggunan wanita muslimah dalam setiap langkah.
+                    </p>
+                    <div class="social-links">
+                        <!-- Instagram -->
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram Hijab Alana">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <!-- TikTok -->
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok Hijab Alana">
+                            <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                        </a>
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp Hijab Alana">
+                            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigasi Cepat -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Menu Utama</h4>
+                    <ul class="footer-links">
+                        <li><a href="#beranda">Beranda</a></li>
+                        <li><a href="#keunggulan">Keunggulan Bahan</a></li>
+                        <li><a href="#katalog">Katalog Produk</a></li>
+                        <li><a href="#testimoni">Testimoni Pembeli</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kategori Produk -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Koleksi</h4>
+                    <ul class="footer-links">
+                        <li><a href="#katalog">Pashmina Silk Premium</a></li>
+                        <li><a href="#katalog">Bella Square Classic</a></li>
+                        <li><a href="#katalog">Instant Bergo Daily</a></li>
+                        <li><a href="#katalog">Koleksi Warna Pastel</a></li>
+                    </ul>
+                </div>
+
+                <!-- Alamat & Jam Operasional -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Alamat Toko</h4>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>Jl. Melati Cantik No. 18, Riau Junction, Bandung, Jawa Barat 40115</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span>Buka Setiap Hari: 08.00 - 21.00 WIB</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <span>CS WhatsApp: +62 812-3456-7890</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Toko Hijab Alana. Hak Cipta Dilindungi Undang-Undang.</p>
+                <p>Dibuat dengan rasa bangga untuk memajukan UMKM Indonesia 🇮🇩</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Quick Button -->
+    <a href="https://wa.me/6281234567890?text=Halo%20Hijab%20Alana,%20saya%20mau%20tanya%20produk" target="_blank" rel="noopener noreferrer" class="floating-wa-btn" aria-label="Chat WhatsApp Langsung">
+        <svg viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+        <span>Chat WhatsApp</span>
+    </a>
+
+    <!-- Interactive Navigation Scripts -->
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when a navigation item is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Active navigation link based on scroll position
+        const sections = document.querySelectorAll('section[id], header[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
