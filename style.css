@@ -2,6 +2,7 @@
    Toko Hijab 'Alana' - Clean Modern E-Commerce Stylesheet
    Focus: Anti-AI Slop, Flat UI, Real Trust Signals, Fast & Responsive
    Typography: Google Fonts Playfair Display & Poppins
+   Inspired by: Clean Minimalist Boutique (Lozy.id style)
    ========================================================== */
 
 /* --- Google Fonts Import --- */
@@ -13,7 +14,8 @@
     --bg-warm: #fcf9f6;             /* Warm soft cream */
     --bg-card: #ffffff;
     --bg-subtle: #f8f3ee;
-    --bg-chat: #e7f8ee;
+    --bg-lozy-bundle: #fbf4f4;       /* Soft pink/beige ala Lozy.id */
+    --border-lozy: #ebdada;
     
     --rose-gold: #b86d60;           /* Refined solid rose gold */
     --rose-gold-dark: #9e564a;
@@ -31,14 +33,15 @@
     --whatsapp-green: #25d366;
     --whatsapp-hover: #20ba5c;
     --shopee-orange: #ee4d2d;
-    --shopee-hover: #d73217;
     --tokped-green: #03ac0e;
-    --tokped-hover: #028e0b;
+    --promo-red: #e11d48;           /* Clean crimson red badge */
     
-    /* Clean Flat Border Radius */
+    /* Border Radius Tokens */
     --radius-sm: 4px;
     --radius-md: 6px;
-    --radius-lg: 8px;
+    --radius-lg: 10px;
+    --radius-xl: 16px;
+    --radius-full: 9999px;
     
     /* Utility Shadows */
     --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.04);
@@ -101,7 +104,7 @@ button {
 
 .container {
     width: 100%;
-    max-width: 1160px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -115,7 +118,7 @@ h1, h2, h3, h4 {
 }
 
 .section {
-    padding: 84px 0;
+    padding: 80px 0;
 }
 
 .section-header {
@@ -200,6 +203,10 @@ h1, h2, h3, h4 {
     width: 100%;
 }
 
+.btn-pill {
+    border-radius: var(--radius-full);
+}
+
 /* Marketplace Secondary Buttons */
 .marketplace-buttons {
     display: grid;
@@ -242,7 +249,24 @@ h1, h2, h3, h4 {
     color: #ffffff;
 }
 
-/* --- Header / Navigation --- */
+/* --- 1. Top Announcement Bar --- */
+.top-announcement-bar {
+    background-color: var(--rose-gold);
+    color: #ffffff;
+    padding: 8px 0;
+    text-align: center;
+    font-size: 0.84rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.announcement-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- 2. Header & Desktop Navbar (Fixed 3-Col Flexbox) --- */
 .header {
     position: sticky;
     top: 0;
@@ -258,32 +282,40 @@ h1, h2, h3, h4 {
     align-items: center;
     justify-content: space-between;
     height: 76px;
+    gap: 20px;
 }
 
 .logo {
     display: inline-block;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .logo-text {
     font-family: var(--font-heading);
-    font-size: 1.65rem;
+    font-size: 1.55rem;
     font-weight: 700;
     color: var(--text-dark);
     letter-spacing: -0.015em;
+    white-space: nowrap;
 }
 
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 24px;
+    justify-content: center;
+    gap: 20px;
+    flex-grow: 1;
+    margin: 0 16px;
 }
 
 .nav-link {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-weight: 500;
     color: var(--text-muted);
-    padding: 6px 0;
+    padding: 6px 2px;
     position: relative;
+    white-space: nowrap;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -293,7 +325,7 @@ h1, h2, h3, h4 {
 .nav-link.active::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     width: 100%;
     height: 2px;
@@ -303,7 +335,14 @@ h1, h2, h3, h4 {
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 16px;
+    flex-shrink: 0;
+}
+
+.header-wa-btn {
+    white-space: nowrap;
+    padding: 9px 16px;
+    font-size: 0.84rem;
+    gap: 6px;
 }
 
 .nav-toggle {
@@ -755,153 +794,176 @@ h1, h2, h3, h4 {
     text-decoration: line-through;
 }
 
-/* --- Section Promo Bundle Hemat 3 Pcs --- */
+/* --- 3. Dashboard Promo Bundle Premium (Desain Ala Lozy.id) --- */
 .promo-bundle-section {
     background-color: #ffffff;
     border-bottom: 1px solid var(--border-color);
 }
 
-.bundle-card {
-    background-color: var(--bg-warm);
-    border: 1.5px solid var(--border-color);
-    border-radius: var(--radius-lg);
-    padding: 44px 40px;
-    position: relative;
+.lozy-bundle-card {
+    background-color: var(--bg-lozy-bundle);
+    border: 1px solid var(--border-lozy);
+    border-radius: var(--radius-xl);
+    padding: 48px 44px;
+    box-shadow: 0 4px 20px rgba(184, 109, 96, 0.05);
 }
 
-.bundle-badge-wrapper {
-    margin-bottom: 16px;
-}
-
-.bundle-badge {
-    display: inline-block;
-    background-color: var(--rose-gold);
-    color: #ffffff;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    padding: 5px 14px;
-    border-radius: var(--radius-sm);
-}
-
-.bundle-grid {
+.lozy-bundle-grid {
     display: grid;
-    grid-template-columns: 1.25fr 0.75fr;
-    gap: 40px;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
     align-items: center;
 }
 
-.bundle-title {
-    font-size: clamp(1.7rem, 2.8vw, 2.2rem);
-    color: var(--text-dark);
-    margin-bottom: 12px;
-    line-height: 1.3;
-}
-
-.bundle-description {
-    font-size: 1rem;
-    color: var(--text-body);
-    margin-bottom: 24px;
-    line-height: 1.7;
-}
-
-.bundle-benefits-list {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    margin-bottom: 30px;
-}
-
-.benefit-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-}
-
-.benefit-check {
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background-color: var(--whatsapp-green);
+.bundle-pill-badge {
+    display: inline-block;
+    background-color: var(--promo-red);
     color: #ffffff;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.lozy-bundle-title {
+    font-size: clamp(1.75rem, 2.6vw, 2.25rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.25;
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+}
+
+.lozy-bundle-desc {
+    font-size: 0.96rem;
+    color: var(--text-body);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.lozy-tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.lozy-tag-item {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    font-size: 0.75rem;
-    font-weight: bold;
-    flex-shrink: 0;
-    margin-top: 2px;
-}
-
-.benefit-item strong {
-    display: block;
+    gap: 6px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-lozy);
+    border-radius: var(--radius-full);
+    padding: 6px 14px;
+    font-size: 0.82rem;
+    font-weight: 600;
     color: var(--text-dark);
-    font-size: 0.95rem;
 }
 
-.benefit-item p {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin-top: 1px;
+.lozy-check-svg {
+    width: 14px;
+    height: 14px;
+    color: var(--rose-gold);
+    flex-shrink: 0;
 }
 
-.bundle-visual-box {
+.lozy-right-col {
     display: flex;
     justify-content: center;
 }
 
-.bundle-summary-card {
+.lozy-package-box {
     background-color: #ffffff;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 28px 24px;
+    border: 1px solid var(--border-lozy);
+    border-radius: 14px;
+    padding: 30px 26px;
     width: 100%;
     box-shadow: var(--shadow-card);
 }
 
-.bundle-summary-tag {
-    display: block;
-    font-size: 0.78rem;
+.package-box-header {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
     font-weight: 700;
     color: var(--text-muted);
-    letter-spacing: 0.05em;
-    margin-bottom: 14px;
+    letter-spacing: 0.06em;
+    margin-bottom: 18px;
+    text-transform: uppercase;
 }
 
-.bundle-items-preview {
+.bundle-checklist {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    font-size: 0.9rem;
-    color: var(--text-body);
-    margin-bottom: 20px;
+    gap: 12px;
+    margin-bottom: 22px;
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border-subtle);
 }
 
-.bundle-items-preview strong {
+.bundle-checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: var(--text-body);
+    line-height: 1.5;
+}
+
+.check-svg {
+    width: 17px;
+    height: 17px;
+    color: var(--whatsapp-green);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.bundle-pricing-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.bundle-price-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.bundle-old-price {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    text-decoration: line-through;
+}
+
+.bundle-new-price {
+    font-family: var(--font-heading);
+    font-size: 1.65rem;
+    font-weight: 700;
     color: var(--text-dark);
+    line-height: 1.1;
 }
 
-.bundle-price-tag {
-    text-align: center;
-}
-
-.bundle-discount-pill {
-    display: block;
+.bundle-save-tag {
     background-color: var(--rose-gold-light);
     color: var(--rose-gold-dark);
-    font-weight: 700;
-    font-size: 0.85rem;
-    padding: 8px 12px;
-    border-radius: var(--radius-sm);
     border: 1px solid rgba(184, 109, 96, 0.3);
-    margin-bottom: 8px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: var(--radius-full);
 }
 
-.bundle-note {
-    font-size: 0.75rem;
+.bundle-footer-note {
+    display: block;
+    text-align: center;
+    font-size: 0.74rem;
     color: var(--text-muted);
+    margin-top: 10px;
 }
 
 /* --- Section 'Kenapa Hijab Alana' --- */
@@ -1228,8 +1290,18 @@ h1, h2, h3, h4 {
 }
 
 /* --- Responsive Breakpoints --- */
+@media (max-width: 1080px) {
+    .nav-menu {
+        gap: 14px;
+        margin: 0 8px;
+    }
+    .nav-link {
+        font-size: 0.84rem;
+    }
+}
+
 @media (max-width: 992px) {
-    .hero-grid, .bundle-grid {
+    .hero-grid, .lozy-bundle-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
@@ -1274,15 +1346,7 @@ h1, h2, h3, h4 {
     }
 }
 
-@media (max-width: 768px) {
-    .section {
-        padding: 60px 0;
-    }
-
-    .hero {
-        padding: 44px 0 60px 0;
-    }
-
+@media (max-width: 860px) {
     .nav-toggle {
         display: flex;
     }
@@ -1297,6 +1361,7 @@ h1, h2, h3, h4 {
         align-items: flex-start;
         padding: 20px 24px;
         gap: 16px;
+        margin: 0;
         border-bottom: 1px solid var(--border-color);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
         display: none;
@@ -1309,13 +1374,24 @@ h1, h2, h3, h4 {
     .header-wa-btn {
         display: none;
     }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .hero {
+        padding: 44px 0 60px 0;
+    }
 
     .skintone-result-card {
         padding: 24px 20px;
     }
 
-    .bundle-card {
-        padding: 32px 24px;
+    .lozy-bundle-card {
+        padding: 32px 20px;
+        border-radius: var(--radius-lg);
     }
 
     .products-grid, .chat-testimonials-grid {
@@ -1375,6 +1451,11 @@ h1, h2, h3, h4 {
 @media (max-width: 480px) {
     .container {
         padding: 0 18px;
+    }
+
+    .top-announcement-bar {
+        font-size: 0.78rem;
+        padding: 6px 12px;
     }
 
     .hero-title {
